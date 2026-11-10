@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RASHA.QUEST — Every Adventurer Has a Story</title>
+<meta name="description" content="RASHA.QUEST — an RPG-style portfolio of Rasha Fathima V, BCA graduate from Calicut, Kerala. Explore seven places to discover her story.">
+<meta property="og:title" content="RASHA.QUEST — Every Adventurer Has a Story">
+<meta property="og:description" content="Explore seven places on a fantasy map to discover the story of Rasha Fathima V.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/rasha.png">
+<meta name="theme-color" content="#101629">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Quicksand:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Loading screen -->
+<div id="loader" aria-hidden="true"><div class="loader-rune">ᚱ</div><p>Opening the realm…</p></div>
+
+<!-- Global controls -->
+<button id="soundBtn" class="btn btn-ghost sound-btn" type="button" aria-pressed="true">♪ Sound: ON</button>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<div id="flash" class="flash" aria-hidden="true"></div>
+
+<main id="main">
+<!-- Shared night scene (title + welcome) -->
+<div id="world" class="world" aria-hidden="true">
+  <svg class="scene" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#0a0f1f"/><stop offset=".55" stop-color="#1a2a4f"/><stop offset="1" stop-color="#4a3f78"/>
+      </linearGradient>
+      <radialGradient id="glow"><stop offset="0" stop-color="#F4F1EA" stop-opacity=".55"/><stop offset=".4" stop-color="#b9b3e6" stop-opacity=".18"/><stop offset="1" stop-color="#7965A8" stop-opacity="0"/></radialGradient>
+      <linearGradient id="isl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3366"/><stop offset="1" stop-color="#151a33"/></linearGradient>
+    </defs>
+    <rect width="1600" height="900" fill="url(#sky)"/>
+    <g id="stars"></g>
+    <circle class="moon-glow" cx="1210" cy="210" r="300" fill="url(#glow)"/>
+    <g class="moon">
+      <circle cx="1210" cy="210" r="88" fill="#F4F1EA"/>
+      <circle cx="1180" cy="190" r="16" fill="#DDE5F2"/><circle cx="1240" cy="240" r="11" fill="#DDE5F2"/><circle cx="1228" cy="176" r="7" fill="#DDE5F2"/>
+    </g>
+    <path d="M0 640 L180 470 300 560 470 380 640 560 780 450 960 600 1120 430 1290 580 1440 470 1600 560 V900 H0Z" fill="#1d2748" opacity=".9"/>
+    <!-- castle -->
+    <g class="castle" fill="#141b36">
+      <path d="M1050 470 V330 h22 v-20 h10 v20 h16 v-20 h10 v20 h22 V470Z"/>
+      <path d="M1040 332 l21 -60 21 60Z M1088 332 l20 -50 20 50Z" fill="#253B63"/>
+      <rect x="1000" y="380" width="40" height="90"/><path d="M994 382 l26 -56 26 56Z" fill="#253B63"/>
+      <rect x="1130" y="390" width="36" height="80"/><path d="M1124 392 l24 -50 24 50Z" fill="#253B63"/>
+      <g class="win" fill="#D8B477"><rect x="1078" y="360" width="8" height="14" rx="4"/><rect x="1016" y="410" width="7" height="12" rx="3"/><rect x="1144" y="418" width="7" height="12" rx="3"/><rect x="1100" y="400" width="7" height="12" rx="3"/></g>
+    </g>
+    <!-- floating islands -->
+    <g class="isle i1"><path d="M240 250 q70 -24 140 0 q-30 70 -70 90 q-40 -20 -70 -90z" fill="url(#isl)"/><path d="M236 250 q74 -28 148 0" stroke="#5f8f7a" stroke-width="8" fill="none" stroke-linecap="round"/><path d="M300 246 l12 -40 12 40z" fill="#3f6b5c"/></g>
+    <g class="isle i2"><path d="M1380 380 q50 -18 100 0 q-22 50 -50 64 q-28 -14 -50 -64z" fill="url(#isl)"/><path d="M1376 380 q54 -20 108 0" stroke="#5f8f7a" stroke-width="7" fill="none" stroke-linecap="round"/></g>
+    <g class="isle i3"><path d="M700 200 q34 -12 68 0 q-14 34 -34 44 q-20 -10 -34 -44z" fill="url(#isl)"/><path d="M697 200 q37 -14 74 0" stroke="#5f8f7a" stroke-width="6" fill="none" stroke-linecap="round"/></g>
+    <path d="M0 760 Q200 660 420 720 T860 700 T1300 730 T1600 690 V900 H0Z" fill="#121a35"/>
+    <path d="M0 830 Q260 770 560 810 T1100 800 T1600 820 V900 H0Z" fill="#0b1124"/>
+  </svg>
+  <div class="fog f1"></div><div class="fog f2"></div>
+  <div id="fx" class="fx"></div>
+</div>
+
+<!-- TITLE -->
+<section id="title" class="screen title-screen" aria-labelledby="t-h">
+  <div class="title-block">
+    <p class="kicker" id="subtitle"></p>
+    <h1 id="t-h" class="logo" tabindex="-1">RASHA<span>.</span>QUEST</h1>
+    <p class="tagline" id="tagline"></p>
+    <div class="title-actions">
+      <button id="startBtn" class="btn btn-gold" type="button">▶ Start Adventure</button>
+    </div>
+    <p class="hint">Scroll, swipe or use the keyboard to explore</p>
+  </div>
+  <div class="hero-spot" id="titleHero"></div>
+</section>
+
+<!-- WELCOME -->
+<section id="welcome" class="screen welcome-screen" aria-labelledby="w-h" hidden>
+  <div class="welcome-stage"><div class="walker" id="welcomeHero"></div></div>
+  <div class="dialog">
+    <h2 id="w-h" class="dialog-name" tabindex="-1">Rasha</h2>
+    <p id="welcomeText"></p>
+    <button id="skipBtn" class="btn btn-ghost" type="button">Continue ▸</button>
+  </div>
+</section>
+
+<!-- JOURNEY (scroll) -->
+<section id="journey" class="screen journey" aria-labelledby="j-h" hidden>
+  <div class="backdrop" id="backdrop" aria-hidden="true"><div class="motif" id="motif"></div></div>
+  <header class="hud">
+    <h2 id="j-h" class="hud-title" tabindex="-1">The Journey</h2>
+    <div class="progress" aria-label="Places discovered">
+      <div class="bar"><i id="progressFill"></i></div>
+      <span id="progressText">0 / 7 places</span>
+    </div>
+  </header>
+  <nav class="rail" aria-label="Jump to a place">
+    <div class="rail-line" aria-hidden="true"><i id="railFill"></i></div>
+    <ol id="railDots"></ol>
+  </nav>
+  <div class="avatar" id="avatar" aria-hidden="true"><div class="face" id="avatarFace"></div></div>
+  <div class="ground" aria-hidden="true"><i id="groundFill"></i></div>
+  <div class="chapters" id="chapters">
+    <div class="intro">
+      <p class="kicker">Seven places · One story</p>
+      <p class="intro-line">Scroll to walk the path</p>
+      <span class="cue" aria-hidden="true">⌄</span>
+    </div>
+  </div>
+</section>
+
+<!-- FINALE -->
+<section id="finale" class="screen finale-screen" aria-labelledby="f-h" hidden>
+  <div class="burst" id="burst" aria-hidden="true"></div>
+  <div class="finale-card">
+    <h2 id="f-h" class="finale-title" tabindex="-1">Quest Completed!</h2>
+    <p class="finale-msg">Thank you for exploring my world.<br>Every great journey begins with a single step.</p>
+    <div class="finale-actions">
+      <button id="finMap" class="btn btn-gold" type="button">Return to the Journey</button>
+      <button id="finNew" class="btn btn-ghost" type="button">↺ Begin a New Journey</button>
+    </div>
+  </div>
+</section>
+</main>
+<noscript><p class="noscript">RASHA.QUEST needs JavaScript to play. Contact: <a href="mailto:rashafathima1819@gmail.com">rashafathima1819@gmail.com</a></p></noscript>
+<script src="script.js"></script>
+</body>
+</html>
