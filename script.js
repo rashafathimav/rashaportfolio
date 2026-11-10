@@ -7,7 +7,7 @@ const DATA = {
   subtitle: "A Journey Beyond Imagination",
   tagline: "Every Adventurer Has a Story. This Is Mine.",
   welcome: "Welcome, traveller! I'm Rasha — a BCA graduate from Calicut, Kerala. Seven places on this map hold my story. Shall we explore?",
-  resume: "assets/Rasha_Fathima_Resume (2).pdf", // Resume PDF
+  resume: "assets/Rasha_Fathima_Resume (2)-1.pdf", // Resume PDF
   portrait: "assets/rasha.png", // Profile picture of Rasha Fathima
   email: "rashafathima1819@gmail.com",
   linkedin: "https://linkedin.com/in/rasha-fathima-v-46a78234a",
