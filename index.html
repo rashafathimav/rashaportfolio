@@ -16,13 +16,40 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<canvas id="webgl3d" class="webgl-vision" aria-hidden="true"></canvas>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+<div id="scrollProgress" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- Loading screen -->
 <div id="loader" aria-hidden="true"><div class="loader-rune">ᚱ</div><p>Opening the realm…</p></div>
 
-<!-- Global controls -->
-<button id="soundBtn" class="btn btn-ghost sound-btn" type="button" aria-pressed="true">♪ Sound: ON</button>
+<!-- Top Navigation Bar -->
+<header class="top-nav" id="topNav">
+  <div class="nav-brand" id="brandLogo">
+    <span class="brand-crest">RF</span>
+    <div class="brand-info">
+      <span class="brand-name">RASHA FATHIMA V</span>
+      <span class="brand-badge"><span class="pulse-dot"></span> Available for Hire</span>
+    </div>
+  </div>
+  <nav class="nav-links" id="navLinks">
+    <button class="nav-link" type="button" data-jump="home">About</button>
+    <button class="nav-link" type="button" data-jump="skills">Skills</button>
+    <button class="nav-link" type="button" data-jump="project">Projects</button>
+    <button class="nav-link" type="button" data-jump="exp">Experience</button>
+    <button class="nav-link" type="button" data-jump="edu">Education</button>
+    <button class="nav-link" type="button" data-jump="hall">Certifications</button>
+    <button class="nav-link" type="button" data-jump="portal">Contact</button>
+  </nav>
+  <div class="nav-actions">
+    <button id="recruiterBtnNav" class="btn btn-sm btn-gold" type="button" title="View Executive Resume Summary">📋 Recruiter View</button>
+    <a class="btn btn-sm btn-ghost" href="assets/rasharr.pdf" download="Rasha_Fathima_Resume.pdf" title="Download Official Resume PDF">📄 Resume</a>
+    <button id="cam3dNavBtn" class="btn btn-sm btn-ghost cam-btn" type="button" title="Toggle 3D Orbit Cam">🌐 3D Cam: Auto</button>
+    <button id="soundBtn" class="btn btn-sm btn-ghost sound-btn" type="button" aria-pressed="true">♪ Sound: ON</button>
+  </div>
+</header>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <div id="flash" class="flash" aria-hidden="true"></div>
 
@@ -67,13 +94,30 @@
 <!-- TITLE -->
 <section id="title" class="screen title-screen" aria-labelledby="t-h">
   <div class="title-block">
-    <p class="kicker" id="subtitle"></p>
-    <h1 id="t-h" class="logo" tabindex="-1">RASHA<span>.</span>QUEST</h1>
-    <p class="tagline" id="tagline"></p>
-    <div class="title-actions">
-      <button id="startBtn" class="btn btn-gold" type="button">▶ Start Adventure</button>
+    <div class="status-pill">
+      <span class="pulse-dot"></span> Open to Software Engineering Opportunities · Calicut / Remote
     </div>
-    <p class="hint">Scroll, swipe or use the keyboard to explore</p>
+    <p class="kicker" id="subtitle">Junior Software Developer & BCA Graduate</p>
+    <h1 id="t-h" class="logo" tabindex="-1">RASHA FATHIMA<span>.</span>V</h1>
+    <p class="tagline" id="tagline">Crafting Scalable Web Applications, Python Backends & Interactive 3D Digital Systems</p>
+    
+    <div class="title-metrics">
+      <div class="metric-item"><b>BCA 2026</b><span>MES College Calicut</span></div>
+      <div class="metric-divider" aria-hidden="true"></div>
+      <div class="metric-item"><b>Core Stack</b><span>Python · React · Django · SQL · Flutter</span></div>
+      <div class="metric-divider" aria-hidden="true"></div>
+      <div class="metric-item"><b>Flagship Project</b><span>BrainLock AI Platform</span></div>
+      <div class="metric-divider" aria-hidden="true"></div>
+      <div class="metric-item"><b>Training</b><span>KELTRON (OJT) & Cognilearn</span></div>
+    </div>
+
+    <div class="title-actions">
+      <button id="startBtn" class="btn btn-gold btn-lg" type="button">⚔ Enter 3D Journey</button>
+      <button id="recruiterBtnHero" class="btn btn-ghost btn-lg" type="button">📋 Recruiter Fast View</button>
+      <a class="btn btn-ghost btn-lg" href="assets/rasharr.pdf" download="Rasha_Fathima_Resume.pdf">📄 Download Resume</a>
+      <button id="cam3dBtnTitle" class="btn btn-ghost btn-lg" type="button">🌐 3D Free Look</button>
+    </div>
+    <p class="hint">Scroll down, swipe or use keys 1–7 to navigate the 3D universe</p>
   </div>
   <div class="hero-spot" id="titleHero"></div>
 </section>
@@ -97,6 +141,7 @@
       <div class="bar"><i id="progressFill"></i></div>
       <span id="progressText">0 / 7 places</span>
     </div>
+    <button id="cam3dBtnHud" class="btn btn-ghost btn-sm cam-btn" type="button" title="Toggle 3D Free-Look Mode">🌐 3D Cam: Auto</button>
   </header>
   <nav class="rail" aria-label="Jump to a place">
     <div class="rail-line" aria-hidden="true"><i id="railFill"></i></div>
@@ -126,7 +171,108 @@
   </div>
 </section>
 </main>
+
+<!-- RECRUITER EXECUTIVE SUMMARY MODAL -->
+<div id="recruiterModal" class="recruiter-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Executive Resume Summary">
+  <div class="recruiter-backdrop" id="recruiterBackdrop"></div>
+  <div class="recruiter-content">
+    <div class="recruiter-header">
+      <div class="recruiter-title-area">
+        <span class="recruiter-kicker">Executive Candidate Profile</span>
+        <h2>RASHA FATHIMA V</h2>
+        <p class="recruiter-subtitle">Software Developer · Web & Python Specialist · BCA Graduate</p>
+        <p class="recruiter-contact-line">
+          <span>📍 Calicut, Kerala, India</span> · 
+          <a href="mailto:rashafathima1819@gmail.com">rashafathima1819@gmail.com</a> · 
+          <span>+91 97785 62503</span> · 
+          <a href="https://linkedin.com/in/rasha-fathima-v-46a78234a" target="_blank" rel="noreferrer">LinkedIn</a> · 
+          <a href="https://github.com/rashafathimav" target="_blank" rel="noreferrer">GitHub</a>
+        </p>
+      </div>
+      <div class="recruiter-header-actions">
+        <a class="btn btn-gold btn-sm" href="assets/rasharr.pdf" download="Rasha_Fathima_Resume.pdf">⬇ Download PDF</a>
+        <button id="closeRecruiterBtn" class="btn btn-ghost btn-sm" type="button" aria-label="Close modal">✕ Close</button>
+      </div>
+    </div>
+    
+    <div class="recruiter-body">
+      <!-- Professional Summary -->
+      <section class="recruiter-section">
+        <h3>Professional Summary</h3>
+        <p>BCA graduate with project-based experience in web and mobile application development, including MERN stack concepts and Flutter development. Contributed to BrainLock, a digital learning platform featuring study resources, interactive learning, online assessments, and AI-supported exam monitoring concepts. Seeking an entry-level software or web development opportunity to apply technical skills, learn from experienced teams, and grow professionally.</p>
+      </section>
+
+      <!-- Technical Skills Grid -->
+      <section class="recruiter-section">
+        <h3>Core Technical Stack</h3>
+        <div class="recruiter-skills-grid">
+          <div class="skill-col"><b>Languages</b><span>Python, JavaScript (ES6+), SQL</span></div>
+          <div class="skill-col"><b>Frameworks & Web</b><span>Django, Flask, Flutter, React.js, HTML5, CSS3, Bootstrap</span></div>
+          <div class="skill-col"><b>Databases</b><span>PostgreSQL, MySQL, SQLite</span></div>
+          <div class="skill-col"><b>Developer Tools</b><span>Git, GitHub, VS Code, Postman, RESTful APIs</span></div>
+        </div>
+      </section>
+
+      <!-- Flagship Project -->
+      <section class="recruiter-section">
+        <h3>Featured Project: BRAINLOCK — Digital Learning & Mentorship Platform</h3>
+        <p class="project-summary-text">A multi-stakeholder digital learning ecosystem engineered to connect students, teachers, and parents with interactive educational workflows and AI-supported exam monitoring safeguards.</p>
+        <ul class="recruiter-bullet-list">
+          <li>Architected intuitive web interfaces for course materials, video distributions, and automated homework assessments.</li>
+          <li>Integrated AI-supported performance analysis, face detection, and activity tracking concepts to secure online examinations.</li>
+          <li>Designed backend endpoints and relational database models for scalable student evaluation and personalized mentorship.</li>
+        </ul>
+      </section>
+
+      <!-- Experience & Education -->
+      <div class="recruiter-two-col">
+        <section class="recruiter-section">
+          <h3>Industry Experience</h3>
+          <div class="recruiter-entry">
+            <div class="entry-head"><b>Cognilearn</b><span class="entry-date">Present · Calicut, Kerala</span></div>
+            <p class="entry-role">Software Development Intern / Trainee</p>
+            <p>Gaining hands-on professional software engineering experience, delivering practical full-stack technical tasks, and collaborating on production-grade application workflows.</p>
+          </div>
+        </section>
+
+        <section class="recruiter-section">
+          <h3>Education</h3>
+          <div class="recruiter-entry">
+            <div class="entry-head"><b>MES College of Arts & Science</b><span class="entry-date">2023 – 2026</span></div>
+            <p class="entry-role">Bachelor of Computer Applications (BCA) · CGPA: 5.942 / 59.42%</p>
+          </div>
+          <div class="recruiter-entry">
+            <div class="entry-head"><b>Rahmaniya VHSS</b><span class="entry-date">2021 – 2023</span></div>
+            <p class="entry-role">Higher Secondary (VHSE) · Junior Software Developer (82%)</p>
+          </div>
+          <div class="recruiter-entry">
+            <div class="entry-head"><b>Markaz Girls High School</b><span class="entry-date">2020 – 2021</span></div>
+            <p class="entry-role">SSLC · Distinction (89%)</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Certifications -->
+      <section class="recruiter-section">
+        <h3>Verified Credentials & Certifications</h3>
+        <div class="cert-chips-row">
+          <span class="cert-pill">⚙ KELTRON Calicut — On the Job Training (OJT), 2023</span>
+          <span class="cert-pill">✦ KITE — Little Kites IT Certification, 2020</span>
+          <span class="cert-pill">✶ Office Applications & Advanced Excel (2025)</span>
+          <span class="cert-pill">🤝 NSS Volunteer — Community Leadership</span>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
 <noscript><p class="noscript">RASHA.QUEST needs JavaScript to play. Contact: <a href="mailto:rashafathima1819@gmail.com">rashafathima1819@gmail.com</a></p></noscript>
+<script src="assets/three.min.js"></script>
+<script>
+  if (!window.THREE) {
+    document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>');
+  }
+</script>
 <script src="script.js"></script>
 </body>
 </html>
+
