@@ -16,7 +16,6 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<canvas id="webgl3d" class="webgl-vision" aria-hidden="true"></canvas>
 <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
 <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 <div id="scrollProgress" aria-hidden="true"></div>
@@ -46,8 +45,6 @@
   <div class="nav-actions">
     <button id="recruiterBtnNav" class="btn btn-sm btn-gold" type="button" title="View Executive Resume Summary">📋 Recruiter View</button>
     <a class="btn btn-sm btn-ghost" href="assets/rasharr.pdf" download="Rasha_Fathima_Resume.pdf" title="Download Official Resume PDF">📄 Resume</a>
-    <button id="styleNavBtn" class="btn btn-sm btn-ghost" type="button" title="Cycle 3D Engine Visual Theme">🎨 Style: PBR</button>
-    <button id="cam3dNavBtn" class="btn btn-sm btn-ghost cam-btn" type="button" title="Toggle 3D Orbit Cam">🌐 3D Cam: Auto</button>
     <button id="soundBtn" class="btn btn-sm btn-ghost sound-btn" type="button" aria-pressed="true">♪ Sound: ON</button>
   </div>
 </header>
@@ -100,53 +97,28 @@
         <span class="pulse-dot"></span> Open to Software Engineering Opportunities · Calicut / Remote
       </div>
       <p class="kicker" id="subtitle">Junior Software Developer & BCA Graduate</p>
-      <h1 id="t-h" class="logo" tabindex="-1">RASHA FATHIMA<span>.</span>V</h1>
-      <p class="tagline" id="tagline">Crafting Scalable Web Applications, Python Backends & Interactive 3D Digital Systems</p>
+      <h1 id="t-h" class="logo" tabindex="-1">RASHA FATHIMA <span>V</span></h1>
+      <p class="tagline" id="tagline">Crafting Scalable Web Applications, Python Backends & Cross-Platform Solutions</p>
       
       <div class="title-metrics">
         <div class="metric-item"><b>BCA 2026</b><span>MES College Calicut</span></div>
         <div class="metric-divider" aria-hidden="true"></div>
         <div class="metric-item"><b>Core Stack</b><span>Python · JavaScript · Django · Flutter · SQL</span></div>
         <div class="metric-divider" aria-hidden="true"></div>
-        <div class="metric-item"><b>Featured Platform</b><span>BrainLock AI Proctoring</span></div>
+        <div class="metric-item"><b>Key Platforms</b><span>BrainLock AI · Flutter Mobile Suite</span></div>
         <div class="metric-divider" aria-hidden="true"></div>
         <div class="metric-item"><b>Experience</b><span>Cognilearn & KELTRON (OJT)</span></div>
       </div>
 
       <div class="title-actions">
-        <button id="startBtn" class="btn btn-gold btn-lg" type="button">⚔ Enter 3D Journey</button>
+        <button id="startBtn" class="btn btn-gold btn-lg" type="button">⚔ Explore My Journey</button>
         <button id="recruiterBtnHero" class="btn btn-ghost btn-lg" type="button">📋 Recruiter Fast View</button>
-        <a class="btn btn-ghost btn-lg" href="assets/rasharr.pdf" download="Rasha_Fathima_Resume.pdf">📄 Download Resume</a>
-        <button id="cam3dBtnTitle" class="btn btn-ghost btn-lg" type="button">🌐 3D Free Look</button>
       </div>
-      <p class="hint">Scroll down, swipe or click to explore the 3D universe</p>
-    </div>
 
-    <!-- Spatial 3D Hero Profile HUD Widget -->
-    <div class="hero-3d-card" id="hero3dCard">
-      <div class="card-corner tl"></div><div class="card-corner tr"></div>
-      <div class="card-corner bl"></div><div class="card-corner br"></div>
-      <div class="hero-3d-badge">
-        <span class="rune-pulse">✦</span> 3D REALM VISUALIZER
-      </div>
-      <div class="hero-avatar-wrap">
-        <img src="assets/rasha.png" alt="Rasha Fathima V" class="hero-avatar-img">
-        <div class="avatar-ring-3d"></div>
-        <div class="avatar-orbit-dot d1"></div>
-        <div class="avatar-orbit-dot d2"></div>
-      </div>
-      <div class="hero-3d-details">
-        <h3 class="hero-3d-name">Rasha Fathima V</h3>
-        <p class="hero-3d-sub">Junior Software Developer</p>
-        <div class="hero-3d-stats">
-          <div class="h-stat"><span class="h-label">EXPERIENCE</span><span class="h-val">Cognilearn (Calicut)</span></div>
-          <div class="h-stat"><span class="h-label">FLAGSHIP</span><span class="h-val">BrainLock Platform</span></div>
-          <div class="h-stat"><span class="h-label">EDUCATION</span><span class="h-val">BCA · MES College</span></div>
-        </div>
-        <div class="hero-3d-controls">
-          <button class="btn btn-xs btn-gold" id="btnPulseRealm" type="button" title="Send Shockwave Pulse through 3D Scene">⚡ Pulse Realm</button>
-          <button class="btn btn-xs btn-ghost" id="btnToggle3DTheme" type="button" title="Toggle 3D Visual Shader Style">🎨 Style: PBR</button>
-        </div>
+      <!-- Animated Scroll Prompt -->
+      <div class="scroll-cue-wrap">
+        <div class="mouse-scroll-icon" aria-hidden="true"><i class="mouse-wheel"></i></div>
+        <span class="hint">Scroll or swipe down to walk the path</span>
       </div>
     </div>
   </div>
@@ -172,7 +144,6 @@
       <div class="bar"><i id="progressFill"></i></div>
       <span id="progressText">0 / 7 places</span>
     </div>
-    <button id="cam3dBtnHud" class="btn btn-ghost btn-sm cam-btn" type="button" title="Toggle 3D Free-Look Mode">🌐 3D Cam: Auto</button>
   </header>
   <nav class="rail" aria-label="Jump to a place">
     <div class="rail-line" aria-hidden="true"><i id="railFill"></i></div>
@@ -246,15 +217,48 @@
       </section>
 
       <!-- Flagship Project -->
+      <!-- Featured Completed Projects -->
       <section class="recruiter-section">
-        <h3>Featured Project: BrainLock | Digital Learning and Mentorship Platform</h3>
-        <p class="project-summary-text">A web and mobile-based learning platform connecting students, teachers, and parents with study materials, video lessons, assignments, and online examinations.</p>
-        <ul class="recruiter-bullet-list">
-          <li>Worked on a web and mobile learning platform designed to connect teachers, students, and parents.</li>
-          <li>Platform features include study materials, interactive learning videos, assignments, and online examinations.</li>
-          <li>Developed BrainLock, a web and mobile-based learning platform connecting students, teachers, and parents with study materials, video lessons, assignments, and online examinations.</li>
-          <li>Integrated AI-based features for student performance analysis, face detection, and activity tracking to support secure online examinations.</li>
-        </ul>
+        <h3>Featured Engineering Projects</h3>
+
+        <div style="background:rgba(16,22,41,.5);border:1px solid rgba(216,180,119,.2);border-radius:10px;padding:14px;margin-bottom:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+            <h4 style="color:var(--gold);margin:0;font-size:1.02rem">BrainLock | Digital Learning and Mentorship Platform</h4>
+            <span class="cert-pill" style="font-size:.72rem;padding:3px 10px;color:#7fd1a3;border-color:#7fd1a3">Web & AI Proctoring</span>
+          </div>
+          <p class="project-summary-text" style="margin:6px 0 8px">A web and mobile-based learning platform connecting students, teachers, and parents with study materials, video lessons, assignments, and online examinations.</p>
+          <ul class="recruiter-bullet-list">
+            <li>Worked on a web and mobile learning platform designed to connect teachers, students, and parents.</li>
+            <li>Platform features include study materials, interactive learning videos, assignments, and online examinations.</li>
+            <li>Developed BrainLock, connecting students, teachers, and parents with comprehensive learning workflows.</li>
+            <li>Integrated AI-based features for student performance analysis, face detection, and activity tracking to support secure online examinations.</li>
+          </ul>
+          <div style="margin-top:10px">
+            <a class="btn btn-sm btn-ghost" href="https://github.com/rashafathimav/" target="_blank" rel="noreferrer" style="display:inline-flex;align-items:center;gap:6px;font-size:.76rem;padding:4px 12px">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>View GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <div style="background:rgba(16,22,41,.5);border:1px solid rgba(216,180,119,.2);border-radius:10px;padding:14px">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px">
+            <h4 style="color:var(--gold);margin:0;font-size:1.02rem">Flutter Mobile Suite | Educational & Productivity App</h4>
+            <span class="cert-pill" style="font-size:.72rem;padding:3px 10px;color:#8ee3f0;border-color:#8ee3f0">Mobile Application</span>
+          </div>
+          <p class="project-summary-text" style="margin:6px 0 8px">Cross-platform mobile application developed by Rasha with Flutter and Dart for student productivity, task management, and offline-first notes synchronization.</p>
+          <ul class="recruiter-bullet-list">
+            <li>Architected and developed a full-featured cross-platform mobile client with Flutter and Dart.</li>
+            <li>Implemented offline-first notes synchronization, study task workflows, and responsive UI components.</li>
+            <li>Integrated RESTful API communication for real-time progress tracking and performance evaluation.</li>
+          </ul>
+          <div style="margin-top:10px">
+            <a class="btn btn-sm btn-ghost" href="https://github.com/rashafathimav/" target="_blank" rel="noreferrer" style="display:inline-flex;align-items:center;gap:6px;font-size:.76rem;padding:4px 12px">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>View GitHub</span>
+            </a>
+          </div>
+        </div>
       </section>
 
       <!-- Experience & Education -->
@@ -312,21 +316,7 @@
   </div>
 </div>
 
-<!-- Real-time 3D Telemetry HUD -->
-<div class="telemetry-bar" id="telemetryBar" aria-hidden="true">
-  <span class="telem-item"><i class="telem-beacon"></i> <b>WEBGL 3D</b> PBR REALM</span>
-  <span class="telem-item"><b>FPS:</b> <span id="telemFps">60 FPS</span></span>
-  <span class="telem-item"><b>POS:</b> <span id="telemCoords">X:0.0 Y:10.0 Z:36.0</span></span>
-  <span class="telem-item"><b>WAYPOINT:</b> <span id="telemWp">1 / 7</span></span>
-</div>
-
 <noscript><p class="noscript">RASHA.QUEST needs JavaScript to play. Contact: <a href="mailto:rashafathima1819@gmail.com">rashafathima1819@gmail.com</a></p></noscript>
-<script src="assets/three.min.js"></script>
-<script>
-  if (!window.THREE) {
-    document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>');
-  }
-</script>
 <script src="script.js"></script>
 </body>
 </html>
