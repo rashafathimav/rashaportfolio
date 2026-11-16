@@ -67,22 +67,56 @@ body.orbit-mode #webgl3d:active{cursor:grabbing}
 @keyframes flicker{from{opacity:.2}to{opacity:1}}
 @keyframes runeUp{0%{opacity:0;transform:translateY(0) rotate(0)}15%{opacity:1}85%{opacity:.8}100%{opacity:0;transform:translateY(-38vh) rotate(25deg)}}
 
-/* Title */
-.title-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:84px 20px 24px;text-align:center}
-.title-block{max-width:720px;display:flex;flex-direction:column;align-items:center;gap:14px}
+/* Title & Spatial 3D Hero Layout */
+.title-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:88px 24px 36px;min-height:100vh;box-sizing:border-box}
+.title-container{display:flex;flex-direction:column;align-items:center;gap:32px;width:100%;max-width:1240px;margin:0 auto}
+@media (min-width:1040px){
+  .title-container{display:grid;grid-template-columns:1.2fr 0.8fr;gap:48px;align-items:center}
+  .title-block{align-items:flex-start!important;text-align:left!important}
+  .title-actions{justify-content:flex-start!important}
+  .title-metrics{justify-content:flex-start!important}
+}
+.title-block{max-width:740px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
 .vision-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--fh);font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);background:rgba(16,22,41,.75);border:1px solid rgba(216,180,119,.45);padding:6px 14px;border-radius:99px;box-shadow:0 0 20px -4px rgba(216,180,119,.4);backdrop-filter:blur(8px);animation:pulse 2.5s infinite alternate}
 .vision-gem{color:#7fd1a3;display:inline-block;animation:spinRune 8s linear infinite}
 @keyframes spinRune{to{transform:rotate(360deg)}}
 .kicker{font-family:var(--fh);letter-spacing:.32em;text-transform:uppercase;font-size:.78rem;color:var(--silver);text-shadow:0 2px 10px #000}
-.logo{font-size:clamp(2.6rem,10vw,6.4rem);font-weight:900;letter-spacing:.06em;background:linear-gradient(180deg,#fff6df 10%,var(--gold) 55%,#9a7440);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 24px rgba(216,180,119,.35));animation:rise 1.2s var(--ease) both}
+.logo{font-size:clamp(2.5rem,8vw,5.6rem);font-weight:900;letter-spacing:.06em;background:linear-gradient(180deg,#fff6df 10%,var(--gold) 55%,#9a7440);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 24px rgba(216,180,119,.35));animation:rise 1.2s var(--ease) both;line-height:1.05}
 .logo span{color:var(--violet);-webkit-text-fill-color:#b9a4f0}
-.tagline{font-size:clamp(1.05rem,2.6vw,1.35rem);color:var(--mist);font-weight:600;text-shadow:0 2px 12px #000;animation:rise 1.2s .2s var(--ease) both}
+.tagline{font-size:clamp(1rem,2.2vw,1.3rem);color:var(--mist);font-weight:600;text-shadow:0 2px 12px #000;animation:rise 1.2s .2s var(--ease) both}
 .title-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:10px;animation:rise 1.2s .4s var(--ease) both}
-.title-actions .btn{font-size:1rem;padding:.9rem 2rem}
+.title-actions .btn{font-size:.95rem;padding:.85rem 1.8rem}
 .hint{font-size:.8rem;color:var(--soft);text-shadow:0 1px 6px #000}
-.hero-spot{width:clamp(96px,16vh,150px);margin-top:20px}
-@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-@media (min-width:960px){.hero-spot{position:absolute;left:11%;bottom:7vh;margin:0;width:clamp(130px,20vh,190px)}}
+
+/* Spatial 3D Hero Profile HUD Widget */
+.hero-3d-card{position:relative;background:rgba(13,19,38,.76);border:1px solid rgba(216,180,119,.35);border-radius:20px;padding:26px 22px;box-shadow:0 24px 60px -12px rgba(0,0,0,.7),0 0 32px -6px rgba(142,227,240,.2);backdrop-filter:blur(18px) saturate(160%);display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;max-width:370px;width:100%;margin:0 auto;box-sizing:border-box;animation:rise 1.2s .3s var(--ease) both}
+.hero-avatar-wrap{position:relative;width:130px;height:130px;display:grid;place-items:center;margin:4px 0}
+.hero-avatar-img{width:104px;height:104px;border-radius:50%;object-fit:cover;border:2.5px solid var(--gold);box-shadow:0 0 24px rgba(216,180,119,.45);z-index:2}
+.avatar-ring-3d{position:absolute;inset:0;border-radius:50%;border:1.5px dashed rgba(142,227,240,.65);animation:spinRune 14s linear infinite}
+.avatar-orbit-dot{position:absolute;width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold)}
+.avatar-orbit-dot.d1{top:0;left:50%;margin-left:-4px;animation:orbitDot 7s linear infinite}
+.avatar-orbit-dot.d2{bottom:0;left:50%;margin-left:-4px;animation:orbitDot 7s linear infinite reverse}
+@keyframes orbitDot{from{transform:rotate(0deg) translateX(65px) rotate(0deg)}to{transform:rotate(360deg) translateX(65px) rotate(-360deg)}}
+.hero-3d-badge{font-family:var(--fh);font-size:.68rem;letter-spacing:.22em;color:#8ee3f0;display:inline-flex;align-items:center;gap:6px;background:rgba(142,227,240,.12);border:1px solid rgba(142,227,240,.32);padding:4px 14px;border-radius:99px}
+.hero-3d-name{font-size:1.3rem;color:#fff;margin:0;font-family:var(--fh);letter-spacing:.04em}
+.hero-3d-sub{font-size:.82rem;color:var(--gold);margin:0;font-weight:600}
+.hero-3d-stats{width:100%;display:grid;gap:8px;background:rgba(9,13,26,.7);border:1px solid rgba(216,180,119,.2);border-radius:10px;padding:12px;margin:2px 0}
+.h-stat{display:flex;justify-content:space-between;align-items:center;font-size:.78rem}
+.h-label{color:var(--soft);letter-spacing:.08em;font-family:var(--fh);font-size:.68rem}
+.h-val{color:var(--mist);font-weight:600}
+.hero-3d-controls{display:flex;gap:10px;width:100%;justify-content:center}
+
+/* Sci-Fi Tech Corner Brackets */
+.card-corner{position:absolute;width:9px;height:9px;border-color:var(--gold);pointer-events:none}
+.card-corner.tl{top:-1px;left:-1px;border-top:2px solid;border-left:2px solid}
+.card-corner.tr{top:-1px;right:-1px;border-top:2px solid;border-right:2px solid}
+.card-corner.bl{bottom:-1px;left:-1px;border-bottom:2px solid;border-left:2px solid}
+.card-corner.br{bottom:-1px;right:-1px;border-bottom:2px solid;border-right:2px solid}
+
+/* Telemetry HUD Bar */
+.telemetry-bar{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);z-index:80;display:inline-flex;align-items:center;gap:16px;padding:6px 18px;border-radius:99px;background:rgba(10,15,30,.82);backdrop-filter:blur(14px) saturate(160%);border:1px solid rgba(142,227,240,.3);box-shadow:0 4px 24px rgba(0,0,0,.5);font-family:var(--fh);font-size:.68rem;letter-spacing:.1em;color:var(--mist);pointer-events:none;transition:opacity .3s ease}
+.telem-beacon{display:inline-block;width:6px;height:6px;border-radius:50%;background:#7fd1a3;box-shadow:0 0 8px #7fd1a3;margin-right:6px;animation:pulse 2s infinite alternate}
+@media (max-width:760px){.telemetry-bar{display:none}}
 
 /* Character */
 .hero-svg{width:100%;height:auto;display:block;overflow:visible;filter:drop-shadow(0 8px 14px rgba(0,0,0,.45))}

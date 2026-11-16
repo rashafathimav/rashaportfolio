@@ -4,81 +4,104 @@
    ===================================================================== */
 const DATA = {
   name: "Rasha Fathima V",
-  subtitle: "A Journey Beyond Imagination",
+  subtitle: "Junior Software Developer & BCA Graduate",
   tagline: "Every Adventurer Has a Story. This Is Mine.",
   welcome: "Welcome, traveller! I'm Rasha — a BCA graduate from Calicut, Kerala. Seven places on this map hold my story. Shall we explore?",
-  resume: "assets/rasharr.pdf", // Resume PDF
-  portrait: "assets/rasha.png", // Profile picture of Rasha Fathima
+  resume: "assets/rasharr.pdf",
+  portrait: "assets/rasha.png",
   email: "rashafathima1819@gmail.com",
-  linkedin: "https://linkedin.com/in/rasha-fathima-v-46a78234a",
-  github: "https://github.com/rashafathimav", // CONFIRM USERNAME BEFORE PUBLISHING
+  phone: "9778562503",
+  phoneDisplay: "+91 97785 62503",
+  linkedin: "https://www.linkedin.com/in/rasha-fathima-v",
+  github: "https://github.com/rashafathimav/",
 
   about: {
-    facts: ["Rasha Fathima V", "BCA Graduate", "Calicut, Kerala, India"],
-    summary: "BCA graduate with project-based experience in web and mobile application development, including MERN stack concepts and Flutter development.",
-    personality: "Creative thinking, problem solving & NSS volunteer — combining code with engaging interactive design.",
+    facts: ["Rasha Fathima V", "BCA Graduate (2026)", "Calicut, Kerala, India"],
+    summary: "BCA graduate with project-based experience in web and mobile application development, including MERN stack concepts and Flutter development. Contributed to BrainLock, a digital learning platform featuring study resources, interactive learning, online assessments, and AI-supported exam monitoring concepts. Seeking an entry-level software or web development opportunity to apply technical skills, learn from experienced teams, and grow professionally.",
+    personality: "Creative thinking, problem solving & NSS volunteer — combining solid clean code with engaging interactive design.",
     objective: "Seeking an entry-level software or web development opportunity to apply technical skills, learn from experienced teams, and grow professionally.",
   },
 
   skills: [
     { group: "Programming", icon: "✦", items: ["Python", "JavaScript", "SQL"] },
-    { group: "Web", icon: "❖", items: ["HTML", "CSS", "React.js", "Bootstrap"] },
-    { group: "Frameworks", icon: "✧", items: ["Django", "Flask", "Flutter"] },
+    { group: "Web Development", icon: "❖", items: ["HTML", "CSS", "React.js", "Bootstrap"] },
+    { group: "Frameworks / Libraries", icon: "✧", items: ["Django", "Flask", "Flutter"] },
     { group: "Databases", icon: "◆", items: ["PostgreSQL", "MySQL", "SQLite"] },
     { group: "Tools", icon: "✶", items: ["Git", "GitHub", "VS Code", "Postman"] },
   ],
 
   skillsList: [
     { name: "Python", cat: "lang", level: 90, icon: "🐍" },
-    { name: "JavaScript (ES6+)", cat: "lang", level: 85, icon: "⚡" },
+    { name: "JavaScript", cat: "lang", level: 85, icon: "⚡" },
     { name: "SQL", cat: "lang", level: 85, icon: "💾" },
-    { name: "React.js", cat: "web", level: 82, icon: "⚛️" },
-    { name: "HTML5 & Modern CSS", cat: "web", level: 95, icon: "🎨" },
-    { name: "Bootstrap UI", cat: "web", level: 88, icon: "📐" },
     { name: "Django", cat: "frame", level: 84, icon: "🛡️" },
     { name: "Flask", cat: "frame", level: 80, icon: "🌶️" },
     { name: "Flutter", cat: "frame", level: 78, icon: "📱" },
+    { name: "React.js", cat: "web", level: 82, icon: "⚛️" },
+    { name: "HTML & CSS", cat: "web", level: 95, icon: "🎨" },
+    { name: "Bootstrap", cat: "web", level: 88, icon: "📐" },
     { name: "PostgreSQL", cat: "db", level: 84, icon: "🐘" },
     { name: "MySQL", cat: "db", level: 86, icon: "🐬" },
     { name: "SQLite", cat: "db", level: 88, icon: "📦" },
-    { name: "Git & GitHub", cat: "tools", level: 90, icon: "🐙" },
-    { name: "Visual Studio Code", cat: "tools", level: 95, icon: "💻" },
-    { name: "Postman & REST APIs", cat: "tools", level: 86, icon: "🚀" },
+    { name: "Git", cat: "tools", level: 90, icon: "🐙" },
+    { name: "GitHub", cat: "tools", level: 92, icon: "🌐" },
+    { name: "VS Code", cat: "tools", level: 95, icon: "💻" },
+    { name: "Postman", cat: "tools", level: 86, icon: "🚀" },
   ],
 
   project: {
     name: "BRAINLOCK",
-    summary: "A digital learning and mentorship platform connecting teachers, students and parents.",
+    subtitle: "Digital Learning and Mentorship Platform",
+    summary: "A digital learning and mentorship platform designed to connect teachers, students, and parents with study materials, interactive learning videos, assignments, and online examinations.",
     features: [
-      "Study materials & video lessons",
-      "Assignments & online exams",
-      "AI-supported performance analysis",
-      "Face detection & activity tracking",
-      "Personalized learning insights"
+      "Study materials & interactive video lessons",
+      "Assignments & online examinations",
+      "AI-based student performance analysis",
+      "Face detection & activity tracking for secure exams",
+      "Personalized mentorship workflows",
     ],
   },
 
   experience: [{
-    org: "Cognilearn", place: "Calicut, Kerala · Present",
+    org: "Cognilearn",
+    place: "Calicut, Kerala · Present",
+    role: "Software Development Experience",
     points: [
       "Gaining practical industry experience and developing professional skills.",
-      "Working on technical tasks and expanding practical software development knowledge.",
+      "Working on technical tasks and improving practical knowledge.",
     ],
   }],
 
   education: [
-    { title: "Bachelor of Computer Applications (BCA)", where: "MES College of Arts and Science, Calicut (CGPA: 5.942)", when: "2023 – 2026" },
-    { title: "Higher Secondary (Plus Two) — Junior Software Developer", where: "Rahmaniya VHSS, Calicut (82%)", when: "2021 – 2023" },
-    { title: "Secondary School Leaving Certificate (SSLC)", where: "Markaz Girls High School (89%)", when: "2020 – 2021" },
+    {
+      title: "Bachelor of computer Application (BCA)",
+      where: "MES College of Arts and Science | Calicut, Kerala",
+      score: "CGPA: 5.942 / Percentage 59.42%",
+      when: "2023 – 2026",
+    },
+    {
+      title: "Higher Secondary (Plus Two) | Junior Software Developer",
+      where: "Rahmaniya VHSS | Calicut, Kerala",
+      score: "Percentage 82%",
+      when: "2021 – 2023",
+    },
   ],
 
   certs: [
+    { name: "On the Job Training (OJT)", by: "KELTRON Calicut", when: "2023", icon: "⚙" },
     { name: "Little Kites", by: "KITE", when: "2020", icon: "✦" },
-    { name: "On the Job Training (OJT)", by: "KELTRON, Calicut", when: "2023", icon: "⚙" },
-    { name: "Office Applications and Advanced Excel", by: "Add-on course", when: "2025", icon: "✶" },
+    { name: "Office Applications and Advanced EXCEL", by: "Add on course", when: "2025", icon: "✶" },
+    { name: "Kickstar your ML journey", by: "Upcode", when: "Credential", icon: "🤖" },
+    { name: "AI Workshop on Python and AI Development", by: "Upcode", when: "Workshop", icon: "🧠" },
+    { name: "Industrial Visit", by: "Spectrum Softtech Solutions", when: "Technical Exposure", icon: "🏢" },
   ],
 
-  // The journey shows these places top to bottom, in this order
+  additional: {
+    interests: ["Python Programming", "Web Development", "Software Development"],
+    strengths: ["NSS Volunteer", "Creative Thinking", "Problem Solving", "Active Listening", "Responsible Work Ethic"],
+    languages: ["English", "Malayalam"],
+  },
+
   places: [
     { id: "home", name: "Adventurer's Home", sub: "About Me", desc: "Meet the adventurer behind this journey.", ac: "#E8A86B", bg: ["#2c1e33", "#101629"], motif: ["rise", "•"] },
     { id: "skills", name: "Forest of Skills", sub: "Skills", desc: "Gather the abilities collected along the way.", ac: "#7FD1A3", bg: ["#0f2b2a", "#0e1528"], motif: ["fall", "❦"] },
@@ -155,6 +178,12 @@ const Snd = {
     else if (name === "chime") arp([72, 76, 79, 84], 0.09, 0.14);
     else if (name === "locked") { this.tone(220, t, 0.25, "square", 0.04); this.tone(185, t + 0.15, 0.35, "square", 0.04); }
     else if (name === "unlock") arp([67, 71, 74, 79, 83, 86], 0.08, 0.14, 1);
+    else if (name === "pulse") {
+      this.tone(110, t, 0.45, "sine", 0.25, this.fx, 0.04);
+      this.tone(220, t + 0.04, 0.55, "triangle", 0.18, this.fx, 0.06);
+      this.tone(440, t + 0.08, 0.65, "sine", 0.15, this.fx, 0.08);
+      arp([72, 79, 84, 91], 0.06, 0.1, 1.2);
+    }
     else if (name === "finale") { arp([60, 64, 67, 72, 76, 79, 84, 88], 0.07, 0.13, 1.4);[60, 64, 67].forEach((n) => this.tone(hz(n), t + 0.6, 2.6, "triangle", 0.1, this.fx, 0.3)); }
   },
   startMusic() {
@@ -229,6 +258,13 @@ const Real3DWorld = {
   moonGroup: null,
   comet: null,
   cometSpeed: 0,
+  waveGrid: null,
+  pointerLight: null,
+  pulseRing: null,
+  pulseScale: 0.1,
+  pulseOpacity: 0.95,
+  pulseActive: false,
+  theme: "pbr",
   realms: [],
   activeRealmIndex: 0,
   scrollProgress: 0,
@@ -243,6 +279,9 @@ const Real3DWorld = {
   camTargetLook: null,
   lights: {},
   curLightColor: null,
+  fps: 60,
+  lastFpsTime: 0,
+  frames: 0,
 
   createGlowTexture() {
     const canvas = document.createElement("canvas");
@@ -283,6 +322,7 @@ const Real3DWorld = {
     const rockMesh = new THREE.Mesh(geo, rockMat);
     rockMesh.position.y = -height / 2;
     group.add(rockMesh);
+    group.userData.rockMesh = rockMesh;
 
     // Lush top plateau
     const topGeo = new THREE.CylinderGeometry(radius * 1.04, radius * 0.98, 1.8, segments, 1);
@@ -341,27 +381,31 @@ const Real3DWorld = {
     this.renderer.setSize(w, h);
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    this.renderer.toneMappingExposure = 1.15;
+    this.renderer.toneMappingExposure = 1.18;
 
     this.camTargetPos = new THREE.Vector3(0, 10, 36);
     this.camTargetLook = new THREE.Vector3(0, 2, 0);
     this.camera.position.copy(this.camTargetPos);
     this.camera.lookAt(this.camTargetLook);
 
-    // 2. Lighting
+    // 2. Lighting & Dynamic Cursor Spotlight
     this.initLights();
 
     // 3. Cosmic Environment (Multi-layer particles + Moon + Comets)
     this.initCosmos();
 
-    // 4. The 7 3D Sculpted Realms
+    // 4. Undulating 3D Cyber / Ether Neon Ocean Grid
+    this.initWaveGrid();
+
+    // 5. The 7 3D Sculpted Realms
     this.initRealms();
 
-    // 5. Input Listeners (Mouse parallax, Resize, Orbit)
+    // 6. Input Listeners (Mouse parallax, Resize, Orbit, Pulse on Canvas)
     this.initListeners();
 
-    // 6. Animation Loop
+    // 7. Animation Loop
     this.initialized = true;
+    this.lastFpsTime = performance.now();
     this.animate = this.animate.bind(this);
     requestAnimationFrame(this.animate);
   },
@@ -377,15 +421,21 @@ const Real3DWorld = {
     dirLight.position.set(60, 100, 60);
     this.scene.add(dirLight);
 
-    const accent = new THREE.PointLight(0xd8b477, 3.5, 65);
+    const accent = new THREE.PointLight(0xd8b477, 3.5, 70);
     accent.position.set(0, 15, 20);
     this.scene.add(accent);
 
-    const secondary = new THREE.PointLight(0x7965a8, 2.5, 55);
+    const secondary = new THREE.PointLight(0x7965a8, 2.5, 60);
     secondary.position.set(-20, -10, 15);
     this.scene.add(secondary);
 
-    this.lights = { ambient, hemi, dirLight, accent, secondary };
+    // Dynamic 3D Cursor Spotlight that follows mouse in 3D world space
+    const pointerLight = new THREE.PointLight(0x8ee3f0, 4.2, 85);
+    pointerLight.position.set(0, 15, 25);
+    this.scene.add(pointerLight);
+    this.pointerLight = pointerLight;
+
+    this.lights = { ambient, hemi, dirLight, accent, secondary, pointerLight };
   },
 
   initCosmos() {
@@ -432,15 +482,20 @@ const Real3DWorld = {
     this.starfield = new THREE.Points(starGeo, starMat);
     this.scene.add(this.starfield);
 
-    // 2. Volumetric Cosmic Nebula gas clouds (600 soft glow particles)
-    const nebCount = 600;
+    // 2. Volumetric Cosmic Nebula gas clouds (650 soft glow particles)
+    const nebCount = 650;
     const nebGeo = new THREE.BufferGeometry();
     const nebPos = new Float32Array(nebCount * 3);
     const nebCol = new Float32Array(nebCount * 3);
-    const nebPalette = [new THREE.Color(0x7965a8), new THREE.Color(0x253b63), new THREE.Color(0x7fd1a3), new THREE.Color(0xd8b477)];
+    const nebPalette = [
+      new THREE.Color(0x7965a8),
+      new THREE.Color(0x253b63),
+      new THREE.Color(0x7fd1a3),
+      new THREE.Color(0xd8b477)
+    ];
 
     for (let i = 0; i < nebCount; i++) {
-      const r = 120 + Math.random() * 300;
+      const r = 120 + Math.random() * 320;
       const t = Math.random() * Math.PI * 2;
       const p = Math.acos(2 * Math.random() - 1);
       nebPos[i * 3] = r * Math.sin(p) * Math.cos(t);
@@ -456,7 +511,7 @@ const Real3DWorld = {
     nebGeo.setAttribute("color", new THREE.BufferAttribute(nebCol, 3));
 
     const nebMat = new THREE.PointsMaterial({
-      size: 16,
+      size: 18,
       map: glowTex,
       vertexColors: true,
       transparent: true,
@@ -467,22 +522,22 @@ const Real3DWorld = {
     this.nebulaCloud = new THREE.Points(nebGeo, nebMat);
     this.scene.add(this.nebulaCloud);
 
-    // 3. Foreground Ether Motes (75 luminous drifting orbs)
-    const moteCount = 75;
+    // 3. Foreground Ether Motes (80 luminous drifting orbs)
+    const moteCount = 80;
     const moteGeo = new THREE.BufferGeometry();
     const motePos = new Float32Array(moteCount * 3);
     for (let i = 0; i < moteCount; i++) {
-      motePos[i * 3] = (Math.random() - 0.5) * 80;
-      motePos[i * 3 + 1] = (Math.random() - 0.5) * 160;
-      motePos[i * 3 + 2] = (Math.random() - 0.5) * 60;
+      motePos[i * 3] = (Math.random() - 0.5) * 90;
+      motePos[i * 3 + 1] = (Math.random() - 0.5) * 180;
+      motePos[i * 3 + 2] = (Math.random() - 0.5) * 70;
     }
     moteGeo.setAttribute("position", new THREE.BufferAttribute(motePos, 3));
     const moteMat = new THREE.PointsMaterial({
-      size: 6,
+      size: 6.5,
       map: glowTex,
       color: 0xd8b477,
       transparent: true,
-      opacity: 0.65,
+      opacity: 0.7,
       blending: THREE.AdditiveBlending,
       depthWrite: false,
     });
@@ -514,12 +569,101 @@ const Real3DWorld = {
     this.scene.add(moonGroup);
 
     // 5. Shooting Comet / Meteor
-    const cometGeo = new THREE.CylinderGeometry(0.1, 0.9, 14, 8);
-    const cometMat = new THREE.MeshBasicMaterial({ color: 0x8ee3f0, transparent: true, opacity: 0.8 });
+    const cometGeo = new THREE.CylinderGeometry(0.1, 1.1, 16, 8);
+    const cometMat = new THREE.MeshBasicMaterial({ color: 0x8ee3f0, transparent: true, opacity: 0.85 });
     this.comet = new THREE.Mesh(cometGeo, cometMat);
     this.comet.position.set(200, 200, -200);
     this.comet.rotation.z = Math.PI / 4;
     this.scene.add(this.comet);
+  },
+
+  initWaveGrid() {
+    const geo = new THREE.PlaneGeometry(640, 640, 56, 56);
+    geo.rotateX(-Math.PI / 2);
+    const mat = new THREE.MeshStandardMaterial({
+      color: 0x1a4674,
+      emissive: 0x0a223d,
+      roughness: 0.2,
+      metalness: 0.8,
+      wireframe: true,
+      transparent: true,
+      opacity: 0.42,
+      blending: THREE.AdditiveBlending,
+    });
+    this.waveGrid = new THREE.Mesh(geo, mat);
+    this.waveGrid.position.y = -36;
+    this.scene.add(this.waveGrid);
+  },
+
+  triggerPulse(origin) {
+    if (!this.pulseRing) {
+      const pGeo = new THREE.RingGeometry(1, 2.5, 64);
+      pGeo.rotateX(-Math.PI / 2);
+      const pMat = new THREE.MeshBasicMaterial({
+        color: 0x8ee3f0,
+        transparent: true,
+        opacity: 0.95,
+        side: THREE.DoubleSide,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false,
+      });
+      this.pulseRing = new THREE.Mesh(pGeo, pMat);
+      this.scene.add(this.pulseRing);
+    }
+    const pos = origin || (this.waypointData && this.waypointData[this.activeRealmIndex]
+      ? this.waypointData[this.activeRealmIndex].pos
+      : new THREE.Vector3(0, 0, 0));
+    this.pulseRing.position.set(pos.x, pos.y + 2, pos.z);
+    this.pulseRing.scale.set(0.1, 1, 0.1);
+    this.pulseScale = 0.1;
+    this.pulseOpacity = 0.95;
+    this.pulseActive = true;
+    if (window.Snd && Snd.play) Snd.play("pulse");
+    toast("⚡ 3D Energy Shockwave Dispatched!");
+  },
+
+  setTheme(themeName) {
+    this.theme = themeName;
+    const btnHero = document.getElementById("btnToggle3DTheme");
+    const label = themeName === "cyber" ? "Style: Cyber" : themeName === "astral" ? "Style: Astral" : "Style: PBR";
+    if (btnHero) btnHero.textContent = `🎨 ${label}`;
+
+    if (themeName === "cyber") {
+      if (this.waveGrid) {
+        this.waveGrid.material.color.setHex(0x00f0ff);
+        this.waveGrid.material.emissive.setHex(0x004455);
+        this.waveGrid.material.opacity = 0.65;
+      }
+      if (this.scene) this.scene.fog.color.setHex(0x06111e);
+      if (this.lights.accent) this.lights.accent.color.setHex(0x00ffcc);
+      if (this.lights.pointerLight) this.lights.pointerLight.color.setHex(0x00f0ff);
+    } else if (themeName === "astral") {
+      if (this.waveGrid) {
+        this.waveGrid.material.color.setHex(0xb9a4f0);
+        this.waveGrid.material.emissive.setHex(0x2a1a4a);
+        this.waveGrid.material.opacity = 0.55;
+      }
+      if (this.scene) this.scene.fog.color.setHex(0x181028);
+      if (this.lights.accent) this.lights.accent.color.setHex(0xf2c66d);
+      if (this.lights.pointerLight) this.lights.pointerLight.color.setHex(0xe8a86b);
+    } else {
+      // PBR Default
+      if (this.waveGrid) {
+        this.waveGrid.material.color.setHex(0x1a4674);
+        this.waveGrid.material.emissive.setHex(0x0a223d);
+        this.waveGrid.material.opacity = 0.42;
+      }
+      if (this.scene) this.scene.fog.color.setHex(0x0c1224);
+      if (this.lights.accent) this.lights.accent.color.copy(this.curLightColor);
+      if (this.lights.pointerLight) this.lights.pointerLight.color.setHex(0x8ee3f0);
+    }
+  },
+
+  cycleTheme() {
+    const list = ["pbr", "cyber", "astral"];
+    const next = list[(list.indexOf(this.theme) + 1) % list.length];
+    this.setTheme(next);
+    toast(`✦ 3D Engine Style: ${next.toUpperCase()} Mode Activated`);
   },
 
   initRealms() {
@@ -544,43 +688,86 @@ const Real3DWorld = {
     const crystalMat = (colorHex) => new THREE.MeshPhysicalMaterial({
       color: colorHex,
       emissive: colorHex,
-      emissiveIntensity: 0.35,
+      emissiveIntensity: 0.38,
       roughness: 0.12,
-      metalness: 0.2,
+      metalness: 0.25,
       clearcoat: 1.0,
       clearcoatRoughness: 0.1,
       transmission: 0.55,
-      ior: 1.5,
+      ior: 1.52,
       flatShading: true,
     });
 
-    // --- Realm 0: Home ---
+    // --- Realm 0: Home (Holographic Artifact Core) ---
     const g0 = new THREE.Group();
     g0.position.copy(this.waypointData[0].pos);
     const island0 = this.createSculptedIsland(15, 12, 8, 0x1a2444, 0x22363e);
     g0.add(island0);
 
-    const runeStone = new THREE.Mesh(new THREE.OctahedronGeometry(4.5, 0), crystalMat(0xd8b477));
-    runeStone.position.y = 6;
-    g0.add(runeStone);
+    const runeCore = new THREE.Mesh(new THREE.DodecahedronGeometry(4.6, 0), crystalMat(0xd8b477));
+    runeCore.position.y = 6.5;
+    g0.add(runeCore);
 
+    // Inner glowing heart
+    const innerHeart = new THREE.Mesh(
+      new THREE.OctahedronGeometry(2.4, 0),
+      new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true })
+    );
+    innerHeart.position.y = 6.5;
+    g0.add(innerHeart);
+
+    // Triple nested gyroscopic rings
     const ring0 = new THREE.Mesh(
-      new THREE.TorusGeometry(8.2, 0.28, 14, 48),
+      new THREE.TorusGeometry(8.6, 0.28, 14, 48),
       new THREE.MeshStandardMaterial({ color: 0xe8a86b, emissive: 0x332008, metalness: 0.95, roughness: 0.1 })
     );
-    ring0.position.y = 6;
-    ring0.rotation.x = Math.PI / 2.3;
+    ring0.position.y = 6.5;
     g0.add(ring0);
 
+    const ring1 = new THREE.Mesh(
+      new THREE.TorusGeometry(10.8, 0.22, 14, 48),
+      new THREE.MeshStandardMaterial({ color: 0x8ee3f0, emissive: 0x0c3340, metalness: 0.9, roughness: 0.15 })
+    );
+    ring1.position.y = 6.5;
+    ring1.rotation.x = Math.PI / 3;
+    g0.add(ring1);
+
+    const ring2 = new THREE.Mesh(
+      new THREE.TorusGeometry(12.6, 0.18, 14, 48),
+      new THREE.MeshStandardMaterial({ color: 0xb9a4f0, emissive: 0x221338, metalness: 0.9, roughness: 0.2 })
+    );
+    ring2.position.y = 6.5;
+    ring2.rotation.y = Math.PI / 4;
+    g0.add(ring2);
+
+    // Orbiting mini crystals
+    const miniCrystals = [];
+    for (let i = 0; i < 4; i++) {
+      const mc = new THREE.Mesh(new THREE.OctahedronGeometry(1.1, 0), crystalMat(0x8ee3f0));
+      g0.add(mc);
+      miniCrystals.push(mc);
+    }
+
     g0.userData = { update: (t) => {
-      runeStone.rotation.y = t * 0.6;
-      runeStone.position.y = 6 + Math.sin(t * 1.5) * 0.8;
+      runeCore.rotation.y = t * 0.6;
+      runeCore.rotation.x = Math.sin(t * 0.5) * 0.3;
+      runeCore.position.y = 6.5 + Math.sin(t * 1.5) * 0.7;
+      innerHeart.rotation.y = -t * 1.2;
+      innerHeart.rotation.z = t * 0.8;
+      innerHeart.position.y = runeCore.position.y;
       ring0.rotation.z = t * 0.5;
+      ring1.rotation.y = -t * 0.7;
+      ring2.rotation.x = t * 0.4;
+      miniCrystals.forEach((mc, idx) => {
+        const ang = (idx / 4) * Math.PI * 2 + t * 0.8;
+        mc.position.set(Math.cos(ang) * 11.5, 6.5 + Math.sin(t * 2 + idx) * 1.2, Math.sin(ang) * 11.5);
+        mc.rotation.y = t * 2;
+      });
     }};
     this.scene.add(g0);
     this.realms.push(g0);
 
-    // --- Realm 1: Forest of Skills ---
+    // --- Realm 1: Forest of Skills (5 Platonic Solid Orbs) ---
     const g1 = new THREE.Group();
     g1.position.copy(this.waypointData[1].pos);
     const island1 = this.createSculptedIsland(16, 13, 8, 0x162540, 0x1b3c33);
@@ -600,11 +787,11 @@ const Real3DWorld = {
       const orbMesh = new THREE.Mesh(polyGeos[i], crystalMat(polyColors[i]));
       const wire = new THREE.LineSegments(
         new THREE.WireframeGeometry(polyGeos[i]),
-        new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.45 })
+        new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.5 })
       );
       orbMesh.add(wire);
       g1.add(orbMesh);
-      skillOrbs.push({ mesh: orbMesh, angle, radius: 9.5, speed: 0.4 + i * 0.1, yOffset: 4 + (i % 3) * 2 });
+      skillOrbs.push({ mesh: orbMesh, angle, radius: 9.8, speed: 0.4 + i * 0.1, yOffset: 4 + (i % 3) * 2 });
     }
     for (let i = 0; i < 3; i++) {
       const spire = new THREE.Mesh(new THREE.ConeGeometry(1.6, 11, 5), new THREE.MeshStandardMaterial({ color: 0x2e6653, flatShading: true }));
@@ -622,7 +809,7 @@ const Real3DWorld = {
     this.scene.add(g1);
     this.realms.push(g1);
 
-    // --- Realm 2: Project Kingdom (BrainLock) ---
+    // --- Realm 2: Project Kingdom (BrainLock AI Citadel) ---
     const g2 = new THREE.Group();
     g2.position.copy(this.waypointData[2].pos);
     const island2 = this.createSculptedIsland(17, 12, 8, 0x1f274a, 0x292850);
@@ -646,17 +833,29 @@ const Real3DWorld = {
     beam.position.y = 28;
     g2.add(beam);
 
+    // 3 Scanner Drones
+    const drones = [];
+    for (let i = 0; i < 3; i++) {
+      const d = new THREE.Mesh(new THREE.OctahedronGeometry(0.9, 0), crystalMat(0x8ee3f0));
+      g2.add(d);
+      drones.push(d);
+    }
+
     g2.userData = { update: (t) => {
       gyro1.rotation.x = t * 0.8;
       gyro1.rotation.y = t * 0.5;
       gyro2.rotation.y = -t * 0.6;
       gyro2.rotation.z = t * 0.4;
       citadelCore.rotation.y = t * 0.3;
+      drones.forEach((d, idx) => {
+        const a = (idx / 3) * Math.PI * 2 - t * 1.2;
+        d.position.set(Math.cos(a) * 8.5, 9 + Math.sin(t * 3 + idx) * 1.2, Math.sin(a) * 8.5);
+      });
     }};
     this.scene.add(g2);
     this.realms.push(g2);
 
-    // --- Realm 3: Experience City (Cognilearn) ---
+    // --- Realm 3: Experience City (Cognilearn Towers & Satellite) ---
     const g3 = new THREE.Group();
     g3.position.copy(this.waypointData[3].pos);
     const island3 = this.createSculptedIsland(18, 12, 8, 0x14203d, 0x182c4f);
@@ -683,7 +882,7 @@ const Real3DWorld = {
     this.scene.add(g3);
     this.realms.push(g3);
 
-    // --- Realm 4: Academy of Wisdom (Astrolabe Observatory) ---
+    // --- Realm 4: Academy of Wisdom (Celestial Astrolabe) ---
     const g4 = new THREE.Group();
     g4.position.copy(this.waypointData[4].pos);
     const island4 = this.createSculptedIsland(17, 12, 8, 0x1c1e40, 0x27224f);
@@ -704,7 +903,7 @@ const Real3DWorld = {
     this.scene.add(g4);
     this.realms.push(g4);
 
-    // --- Realm 5: Hall of Achievements ---
+    // --- Realm 5: Hall of Achievements (Trophy Obelisk) ---
     const g5 = new THREE.Group();
     g5.position.copy(this.waypointData[5].pos);
     const island5 = this.createSculptedIsland(16, 12, 8, 0x221f3a, 0x2f2838);
@@ -731,7 +930,7 @@ const Real3DWorld = {
     this.scene.add(g5);
     this.realms.push(g5);
 
-    // --- Realm 6: Contact Portal (Stargate) ---
+    // --- Realm 6: Contact Portal (Stargate Vortex) ---
     const g6 = new THREE.Group();
     g6.position.copy(this.waypointData[6].pos);
     const island6 = this.createSculptedIsland(18, 12, 8, 0x17243c, 0x163445);
@@ -806,7 +1005,11 @@ const Real3DWorld = {
     const canvas = document.getElementById("webgl3d");
     if (canvas) {
       canvas.addEventListener("mousedown", (e) => {
-        if (!this.isOrbitMode) return;
+        if (!this.isOrbitMode) {
+          // In normal mode, clicking the 3D world triggers a shockwave pulse!
+          this.triggerPulse();
+          return;
+        }
         this.isDragging = true;
         this.dragStart.x = e.clientX;
         this.dragStart.y = e.clientY;
@@ -856,6 +1059,7 @@ const Real3DWorld = {
 
     const t = performance.now() * 0.001;
 
+    // Cosmic Rotation
     if (this.starfield) this.starfield.rotation.y = t * 0.015;
     if (this.nebulaCloud) this.nebulaCloud.rotation.y = -t * 0.008;
     if (this.etherMotes) this.etherMotes.rotation.y = t * 0.02;
@@ -871,6 +1075,33 @@ const Real3DWorld = {
       }
     }
 
+    // Undulating Cyber / Ether Wave Ocean Grid
+    if (this.waveGrid) {
+      const pos = this.waveGrid.geometry.attributes.position;
+      const time = t * 1.35;
+      for (let i = 0; i < pos.count; i++) {
+        const vx = pos.getX(i);
+        const vz = pos.getZ(i);
+        const vy = Math.sin(vx * 0.035 + time) * Math.cos(vz * 0.035 + time * 0.8) * 3.8 +
+                   Math.sin((vx + vz) * 0.02 + time * 1.4) * 2.4;
+        pos.setY(i, vy);
+      }
+      pos.needsUpdate = true;
+    }
+
+    // Shockwave Pulse Expansion
+    if (this.pulseActive && this.pulseRing) {
+      this.pulseScale += 1.6;
+      this.pulseOpacity *= 0.93;
+      this.pulseRing.scale.set(this.pulseScale, 1, this.pulseScale);
+      this.pulseRing.material.opacity = this.pulseOpacity;
+      if (this.pulseOpacity < 0.02) {
+        this.pulseActive = false;
+        this.pulseRing.scale.set(0.001, 1, 0.001);
+      }
+    }
+
+    // Realm animations
     this.realms.forEach((r) => {
       if (r.userData && r.userData.update) r.userData.update(t);
     });
@@ -893,9 +1124,17 @@ const Real3DWorld = {
     // Dynamic light color transition
     const targetCol = new THREE.Color(wpA.color).lerp(new THREE.Color(wpB.color), segFrac);
     this.curLightColor.lerp(targetCol, 0.05);
-    if (this.lights.accent) {
+    if (this.lights.accent && this.theme === "pbr") {
       this.lights.accent.color.copy(this.curLightColor);
       this.lights.accent.position.set(curCam.x, curCam.y + 4, curCam.z - 8);
+    }
+
+    // Dynamic 3D Cursor Spotlight sweeps over the scene
+    if (this.pointerLight) {
+      const plX = this.camera.position.x + this.mouse.x * 22;
+      const plY = this.camera.position.y - this.mouse.y * 16;
+      const plZ = this.camera.position.z - 12;
+      this.pointerLight.position.set(plX, plY, plZ);
     }
 
     if (this.currentScreen === "title") {
@@ -925,6 +1164,25 @@ const Real3DWorld = {
     this.camera.lookAt(this.camTargetLook);
 
     this.renderer.render(this.scene, this.camera);
+
+    // Real-Time Telemetry HUD updates
+    this.frames++;
+    const now = performance.now();
+    if (now - this.lastFpsTime >= 500) {
+      this.fps = Math.round((this.frames * 1000) / (now - this.lastFpsTime));
+      const fpsEl = document.getElementById("telemFps");
+      if (fpsEl) fpsEl.textContent = `${this.fps} FPS`;
+      this.frames = 0;
+      this.lastFpsTime = now;
+    }
+    const coordsEl = document.getElementById("telemCoords");
+    if (coordsEl && this.camera) {
+      coordsEl.textContent = `X:${this.camera.position.x.toFixed(1)} Y:${this.camera.position.y.toFixed(1)} Z:${this.camera.position.z.toFixed(1)}`;
+    }
+    const wpEl = document.getElementById("telemWp");
+    if (wpEl) {
+      wpEl.textContent = `${this.activeRealmIndex + 1} / 7`;
+    }
   },
 };
 
@@ -933,7 +1191,7 @@ const Real3DWorld = {
    ===================================================================== */
 function init3DTilt() {
   const cards = document.querySelectorAll(
-    ".panel, .ability, .cert, .link-card, .mock, .portrait, .finale-card, .dialog"
+    ".panel, .ability, .cert, .link-card, .mock, .portrait, .finale-card, .dialog, .hero-3d-card"
   );
   cards.forEach((card) => {
     card.classList.add("has-tilt", "has-glare");
@@ -1166,13 +1424,11 @@ const RENDER = {
   exp: () => `<ol class="timeline">${DATA.experience.map((e) => `<li class="panel">
     <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
       <h3 style="font-size:1.2rem;color:var(--mist);margin:0">${e.org}</h3>
-      <span class="chip" style="color:var(--ac);border-color:var(--ac)">Active Role</span>
+      <span class="chip" style="color:var(--ac);border-color:var(--ac)">Industry Experience</span>
     </div>
     <p class="when" style="margin:4px 0 10px">${e.place}</p>
     <ul class="points" style="line-height:1.7;color:var(--soft)">
-      <li>Gaining practical industry experience building modern web architectures and user-facing features.</li>
-      <li>Developed modular application components, integrated RESTful APIs, and resolved technical defects.</li>
-      <li>Collaborated on version-controlled sprint deliveries, code reviews, and database optimization workflows.</li>
+      ${e.points.map((pt) => `<li>${pt}</li>`).join("")}
     </ul>
     <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px">
       <span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">Django</span><span class="chip">PostgreSQL</span><span class="chip">Git</span>
@@ -1182,17 +1438,37 @@ const RENDER = {
   edu: () => `<ol class="timeline">${DATA.education.map((e) => `<li class="panel">
     <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
       <p class="when" style="margin:0">${e.when}</p>
-      <span class="chip" style="font-size:.78rem;color:var(--gold)">Verified Credential</span>
+      <span class="chip" style="font-size:.78rem;color:var(--gold)">${e.score}</span>
     </div>
     <h3 style="font-size:1.15rem;color:var(--mist);margin:6px 0 4px">${e.title}</h3>
     <p class="muted" style="font-size:.92rem">${e.where}</p>
   </li>`).join("")}</ol>`,
 
-  hall: () => `<div class="badges">${DATA.certs.map((c) => `<article class="cert">
-    <div class="medal" aria-hidden="true">${c.icon}</div>
-    <h3 style="font-size:1.05rem;color:var(--mist);margin-bottom:6px">${c.name}</h3>
-    <p class="muted" style="font-size:.88rem">${[c.by, c.when].filter(Boolean).join(" · ")}</p>
-  </article>`).join("")}</div>`,
+  hall: () => `<div class="badges-container">
+    <div class="badges">${DATA.certs.map((c) => `<article class="cert">
+      <div class="medal" aria-hidden="true">${c.icon}</div>
+      <h3 style="font-size:1.02rem;color:var(--mist);margin-bottom:6px">${c.name}</h3>
+      <p class="muted" style="font-size:.86rem">${[c.by, c.when].filter(Boolean).join(" · ")}</p>
+    </article>`).join("")}</div>
+
+    <div class="panel" style="margin-top:20px">
+      <h3 style="font-size:1.15rem;color:var(--gold);margin-bottom:12px">Additional Verified Qualifications</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px">
+        <div>
+          <b style="color:var(--mist);display:block;margin-bottom:6px;font-size:.88rem">🎯 Technical Interests</b>
+          <p style="font-size:.88rem;color:var(--soft);margin:0">${DATA.additional.interests.join(" · ")}</p>
+        </div>
+        <div>
+          <b style="color:var(--mist);display:block;margin-bottom:6px;font-size:.88rem">⭐ Core Strengths</b>
+          <p style="font-size:.88rem;color:var(--soft);margin:0">${DATA.additional.strengths.join(" · ")}</p>
+        </div>
+        <div>
+          <b style="color:var(--mist);display:block;margin-bottom:6px;font-size:.88rem">🗣 Languages</b>
+          <p style="font-size:.88rem;color:var(--soft);margin:0">${DATA.additional.languages.join(" · ")}</p>
+        </div>
+      </div>
+    </div>
+  </div>`,
 
   portal: () => `<div class="contact-section">
     <div class="links">
@@ -1207,21 +1483,21 @@ const RENDER = {
         <i aria-hidden="true">📞</i>
         <div>
           <b>Phone (Click to Copy)</b>
-          <span style="color:var(--gold)">+91 97785 62503</span>
+          <span style="color:var(--gold)">${DATA.phoneDisplay}</span>
         </div>
       </div>
       <a class="link-card" href="${DATA.linkedin}" target="_blank" rel="noopener noreferrer">
         <i aria-hidden="true">in</i>
         <div>
           <b>LinkedIn</b>
-          <span>rasha-fathima-v-46a78234a</span>
+          <span>rasha-fathima-v</span>
         </div>
       </a>
       <a class="link-card" href="${DATA.github}" target="_blank" rel="noopener noreferrer">
         <i aria-hidden="true">⌥</i>
         <div>
           <b>GitHub</b>
-          <span>github.com/rashafathimav</span>
+          <span>rashafathimav</span>
         </div>
       </a>
       <a class="link-card" href="${DATA.resume}" download="Rasha_Fathima_Resume.pdf">
@@ -1236,7 +1512,7 @@ const RENDER = {
     <!-- Quick Message Composer -->
     <div class="panel" style="margin-top:24px">
       <h3 style="font-size:1.15rem;color:var(--gold)">Direct Recruiter & Hiring Dispatch</h3>
-      <p style="font-size:.9rem;color:var(--soft);margin-bottom:14px">Interested in hiring or interviewing Rasha for software roles? Send a quick message directly.</p>
+      <p style="font-size:.9rem;color:var(--soft);margin-bottom:14px">Interested in hiring or interviewing Rasha for software roles? Send a message directly.</p>
       <form id="contactForm" style="display:grid;gap:12px">
         <input type="text" id="contactSubject" placeholder="Subject / Job Title (e.g. Software Developer Opportunity)" required style="background:rgba(10,15,31,.7);border:1px solid rgba(216,180,119,.4);border-radius:8px;padding:10px 14px;color:#fff;font-family:var(--fb)">
         <textarea id="contactBody" rows="3" placeholder="Message details..." required style="background:rgba(10,15,31,.7);border:1px solid rgba(216,180,119,.4);border-radius:8px;padding:10px 14px;color:#fff;font-family:var(--fb)"></textarea>
@@ -1426,11 +1702,17 @@ function init() {
   if (window.Real3DWorld) Real3DWorld.init();
   init3DTilt();
 
-  // 3D Cam controls
+  // 3D Cam & Visual Theme controls
   ["#cam3dBtnTitle", "#cam3dBtnHud", "#cam3dNavBtn"].forEach((sel) => {
     const el = $(sel);
     if (el) el.addEventListener("click", () => Real3DWorld.toggleOrbitMode());
   });
+  const btnPulse = $("#btnPulseRealm");
+  if (btnPulse) btnPulse.addEventListener("click", () => Real3DWorld.triggerPulse());
+  const btnTheme = $("#btnToggle3DTheme");
+  if (btnTheme) btnTheme.addEventListener("click", () => Real3DWorld.cycleTheme());
+  const styleNav = $("#styleNavBtn");
+  if (styleNav) styleNav.addEventListener("click", () => Real3DWorld.cycleTheme());
 
   // Recruiter modal buttons
   ["#recruiterBtnNav", "#recruiterBtnHero"].forEach((sel) => {

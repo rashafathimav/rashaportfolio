@@ -46,6 +46,7 @@
   <div class="nav-actions">
     <button id="recruiterBtnNav" class="btn btn-sm btn-gold" type="button" title="View Executive Resume Summary">📋 Recruiter View</button>
     <a class="btn btn-sm btn-ghost" href="assets/rasharr.pdf" download="Rasha_Fathima_Resume.pdf" title="Download Official Resume PDF">📄 Resume</a>
+    <button id="styleNavBtn" class="btn btn-sm btn-ghost" type="button" title="Cycle 3D Engine Visual Theme">🎨 Style: PBR</button>
     <button id="cam3dNavBtn" class="btn btn-sm btn-ghost cam-btn" type="button" title="Toggle 3D Orbit Cam">🌐 3D Cam: Auto</button>
     <button id="soundBtn" class="btn btn-sm btn-ghost sound-btn" type="button" aria-pressed="true">♪ Sound: ON</button>
   </div>
@@ -93,33 +94,63 @@
 
 <!-- TITLE -->
 <section id="title" class="screen title-screen" aria-labelledby="t-h">
-  <div class="title-block">
-    <div class="status-pill">
-      <span class="pulse-dot"></span> Open to Software Engineering Opportunities · Calicut / Remote
-    </div>
-    <p class="kicker" id="subtitle">Junior Software Developer & BCA Graduate</p>
-    <h1 id="t-h" class="logo" tabindex="-1">RASHA FATHIMA<span>.</span>V</h1>
-    <p class="tagline" id="tagline">Crafting Scalable Web Applications, Python Backends & Interactive 3D Digital Systems</p>
-    
-    <div class="title-metrics">
-      <div class="metric-item"><b>BCA 2026</b><span>MES College Calicut</span></div>
-      <div class="metric-divider" aria-hidden="true"></div>
-      <div class="metric-item"><b>Core Stack</b><span>Python · React · Django · SQL · Flutter</span></div>
-      <div class="metric-divider" aria-hidden="true"></div>
-      <div class="metric-item"><b>Flagship Project</b><span>BrainLock AI Platform</span></div>
-      <div class="metric-divider" aria-hidden="true"></div>
-      <div class="metric-item"><b>Training</b><span>KELTRON (OJT) & Cognilearn</span></div>
+  <div class="title-container">
+    <div class="title-block">
+      <div class="status-pill">
+        <span class="pulse-dot"></span> Open to Software Engineering Opportunities · Calicut / Remote
+      </div>
+      <p class="kicker" id="subtitle">Junior Software Developer & BCA Graduate</p>
+      <h1 id="t-h" class="logo" tabindex="-1">RASHA FATHIMA<span>.</span>V</h1>
+      <p class="tagline" id="tagline">Crafting Scalable Web Applications, Python Backends & Interactive 3D Digital Systems</p>
+      
+      <div class="title-metrics">
+        <div class="metric-item"><b>BCA 2026</b><span>MES College Calicut</span></div>
+        <div class="metric-divider" aria-hidden="true"></div>
+        <div class="metric-item"><b>Core Stack</b><span>Python · JavaScript · Django · Flutter · SQL</span></div>
+        <div class="metric-divider" aria-hidden="true"></div>
+        <div class="metric-item"><b>Featured Platform</b><span>BrainLock AI Proctoring</span></div>
+        <div class="metric-divider" aria-hidden="true"></div>
+        <div class="metric-item"><b>Experience</b><span>Cognilearn & KELTRON (OJT)</span></div>
+      </div>
+
+      <div class="title-actions">
+        <button id="startBtn" class="btn btn-gold btn-lg" type="button">⚔ Enter 3D Journey</button>
+        <button id="recruiterBtnHero" class="btn btn-ghost btn-lg" type="button">📋 Recruiter Fast View</button>
+        <a class="btn btn-ghost btn-lg" href="assets/rasharr.pdf" download="Rasha_Fathima_Resume.pdf">📄 Download Resume</a>
+        <button id="cam3dBtnTitle" class="btn btn-ghost btn-lg" type="button">🌐 3D Free Look</button>
+      </div>
+      <p class="hint">Scroll down, swipe or click to explore the 3D universe</p>
     </div>
 
-    <div class="title-actions">
-      <button id="startBtn" class="btn btn-gold btn-lg" type="button">⚔ Enter 3D Journey</button>
-      <button id="recruiterBtnHero" class="btn btn-ghost btn-lg" type="button">📋 Recruiter Fast View</button>
-      <a class="btn btn-ghost btn-lg" href="assets/rasharr.pdf" download="Rasha_Fathima_Resume.pdf">📄 Download Resume</a>
-      <button id="cam3dBtnTitle" class="btn btn-ghost btn-lg" type="button">🌐 3D Free Look</button>
+    <!-- Spatial 3D Hero Profile HUD Widget -->
+    <div class="hero-3d-card" id="hero3dCard">
+      <div class="card-corner tl"></div><div class="card-corner tr"></div>
+      <div class="card-corner bl"></div><div class="card-corner br"></div>
+      <div class="hero-3d-badge">
+        <span class="rune-pulse">✦</span> 3D REALM VISUALIZER
+      </div>
+      <div class="hero-avatar-wrap">
+        <img src="assets/rasha.png" alt="Rasha Fathima V" class="hero-avatar-img">
+        <div class="avatar-ring-3d"></div>
+        <div class="avatar-orbit-dot d1"></div>
+        <div class="avatar-orbit-dot d2"></div>
+      </div>
+      <div class="hero-3d-details">
+        <h3 class="hero-3d-name">Rasha Fathima V</h3>
+        <p class="hero-3d-sub">Junior Software Developer</p>
+        <div class="hero-3d-stats">
+          <div class="h-stat"><span class="h-label">EXPERIENCE</span><span class="h-val">Cognilearn (Calicut)</span></div>
+          <div class="h-stat"><span class="h-label">FLAGSHIP</span><span class="h-val">BrainLock Platform</span></div>
+          <div class="h-stat"><span class="h-label">EDUCATION</span><span class="h-val">BCA · MES College</span></div>
+        </div>
+        <div class="hero-3d-controls">
+          <button class="btn btn-xs btn-gold" id="btnPulseRealm" type="button" title="Send Shockwave Pulse through 3D Scene">⚡ Pulse Realm</button>
+          <button class="btn btn-xs btn-ghost" id="btnToggle3DTheme" type="button" title="Toggle 3D Visual Shader Style">🎨 Style: PBR</button>
+        </div>
+      </div>
     </div>
-    <p class="hint">Scroll down, swipe or use keys 1–7 to navigate the 3D universe</p>
   </div>
-  <div class="hero-spot" id="titleHero"></div>
+  <div class="hero-spot" id="titleHero" style="display:none"></div>
 </section>
 
 <!-- WELCOME -->
@@ -185,8 +216,8 @@
           <span>📍 Calicut, Kerala, India</span> · 
           <a href="mailto:rashafathima1819@gmail.com">rashafathima1819@gmail.com</a> · 
           <span>+91 97785 62503</span> · 
-          <a href="https://linkedin.com/in/rasha-fathima-v-46a78234a" target="_blank" rel="noreferrer">LinkedIn</a> · 
-          <a href="https://github.com/rashafathimav" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/rasha-fathima-v" target="_blank" rel="noreferrer">LinkedIn</a> · 
+          <a href="https://github.com/rashafathimav/" target="_blank" rel="noreferrer">GitHub</a>
         </p>
       </div>
       <div class="recruiter-header-actions">
@@ -206,21 +237,23 @@
       <section class="recruiter-section">
         <h3>Core Technical Stack</h3>
         <div class="recruiter-skills-grid">
-          <div class="skill-col"><b>Languages</b><span>Python, JavaScript (ES6+), SQL</span></div>
-          <div class="skill-col"><b>Frameworks & Web</b><span>Django, Flask, Flutter, React.js, HTML5, CSS3, Bootstrap</span></div>
+          <div class="skill-col"><b>Programming</b><span>Python, JavaScript, SQL</span></div>
+          <div class="skill-col"><b>Frameworks / Libraries</b><span>Django, Flask, Flutter</span></div>
           <div class="skill-col"><b>Databases</b><span>PostgreSQL, MySQL, SQLite</span></div>
-          <div class="skill-col"><b>Developer Tools</b><span>Git, GitHub, VS Code, Postman, RESTful APIs</span></div>
+          <div class="skill-col"><b>Tools</b><span>Git, GitHub, VS Code, Postman</span></div>
+          <div class="skill-col"><b>Web Development</b><span>HTML, CSS, React.js, Bootstrap</span></div>
         </div>
       </section>
 
       <!-- Flagship Project -->
       <section class="recruiter-section">
-        <h3>Featured Project: BRAINLOCK — Digital Learning & Mentorship Platform</h3>
-        <p class="project-summary-text">A multi-stakeholder digital learning ecosystem engineered to connect students, teachers, and parents with interactive educational workflows and AI-supported exam monitoring safeguards.</p>
+        <h3>Featured Project: BrainLock | Digital Learning and Mentorship Platform</h3>
+        <p class="project-summary-text">A web and mobile-based learning platform connecting students, teachers, and parents with study materials, video lessons, assignments, and online examinations.</p>
         <ul class="recruiter-bullet-list">
-          <li>Architected intuitive web interfaces for course materials, video distributions, and automated homework assessments.</li>
-          <li>Integrated AI-supported performance analysis, face detection, and activity tracking concepts to secure online examinations.</li>
-          <li>Designed backend endpoints and relational database models for scalable student evaluation and personalized mentorship.</li>
+          <li>Worked on a web and mobile learning platform designed to connect teachers, students, and parents.</li>
+          <li>Platform features include study materials, interactive learning videos, assignments, and online examinations.</li>
+          <li>Developed BrainLock, a web and mobile-based learning platform connecting students, teachers, and parents with study materials, video lessons, assignments, and online examinations.</li>
+          <li>Integrated AI-based features for student performance analysis, face detection, and activity tracking to support secure online examinations.</li>
         </ul>
       </section>
 
@@ -230,24 +263,25 @@
           <h3>Industry Experience</h3>
           <div class="recruiter-entry">
             <div class="entry-head"><b>Cognilearn</b><span class="entry-date">Present · Calicut, Kerala</span></div>
-            <p class="entry-role">Software Development Intern / Trainee</p>
-            <p>Gaining hands-on professional software engineering experience, delivering practical full-stack technical tasks, and collaborating on production-grade application workflows.</p>
+            <p class="entry-role">Software Development Experience</p>
+            <ul class="recruiter-bullet-list" style="margin-top:6px">
+              <li>Gaining practical industry experience and developing professional skills.</li>
+              <li>Working on technical tasks and improving practical knowledge.</li>
+            </ul>
           </div>
         </section>
 
         <section class="recruiter-section">
           <h3>Education</h3>
           <div class="recruiter-entry">
-            <div class="entry-head"><b>MES College of Arts & Science</b><span class="entry-date">2023 – 2026</span></div>
-            <p class="entry-role">Bachelor of Computer Applications (BCA) · CGPA: 5.942 / 59.42%</p>
+            <div class="entry-head"><b>MES College of Arts and Science</b><span class="entry-date">2023 – 2026</span></div>
+            <p class="entry-role">Bachelor of computer Application (BCA) · Calicut, Kerala</p>
+            <p style="font-size:.82rem;color:var(--gold);margin-top:2px">CGPA: 5.942 / Percentage 59.42%</p>
           </div>
-          <div class="recruiter-entry">
+          <div class="recruiter-entry" style="margin-top:12px">
             <div class="entry-head"><b>Rahmaniya VHSS</b><span class="entry-date">2021 – 2023</span></div>
-            <p class="entry-role">Higher Secondary (VHSE) · Junior Software Developer (82%)</p>
-          </div>
-          <div class="recruiter-entry">
-            <div class="entry-head"><b>Markaz Girls High School</b><span class="entry-date">2020 – 2021</span></div>
-            <p class="entry-role">SSLC · Distinction (89%)</p>
+            <p class="entry-role">Higher Secondary (Plus Two) | Junior Software Developer · Calicut, Kerala</p>
+            <p style="font-size:.82rem;color:var(--gold);margin-top:2px">Percentage 82%</p>
           </div>
         </section>
       </div>
@@ -256,15 +290,36 @@
       <section class="recruiter-section">
         <h3>Verified Credentials & Certifications</h3>
         <div class="cert-chips-row">
-          <span class="cert-pill">⚙ KELTRON Calicut — On the Job Training (OJT), 2023</span>
-          <span class="cert-pill">✦ KITE — Little Kites IT Certification, 2020</span>
-          <span class="cert-pill">✶ Office Applications & Advanced Excel (2025)</span>
-          <span class="cert-pill">🤝 NSS Volunteer — Community Leadership</span>
+          <span class="cert-pill">⚙ On the Job Training (OJT) — KELTRON Calicut, 2023</span>
+          <span class="cert-pill">✦ Little Kites — KITE, 2020</span>
+          <span class="cert-pill">✶ Office Applications and Advanced EXCEL — Add on course, 2025</span>
+          <span class="cert-pill">🤖 Kickstar your ML journey — Upcode</span>
+          <span class="cert-pill">🧠 AI Workshop on Python and AI Development — Upcode</span>
+          <span class="cert-pill">🏢 Industrial Visit — Spectrum Softtech Solutions</span>
+        </div>
+      </section>
+
+      <!-- Additional Information -->
+      <section class="recruiter-section" style="margin-bottom:0">
+        <h3>Additional Information</h3>
+        <div class="recruiter-skills-grid">
+          <div class="skill-col"><b>Technical Interests</b><span>Python Programming, Web Development, Software Development</span></div>
+          <div class="skill-col"><b>Strengths</b><span>NSS Volunteer, Creative Thinking, Problem Solving, Active Listening, Responsible Work Ethic</span></div>
+          <div class="skill-col"><b>Languages</b><span>English, Malayalam</span></div>
         </div>
       </section>
     </div>
   </div>
 </div>
+
+<!-- Real-time 3D Telemetry HUD -->
+<div class="telemetry-bar" id="telemetryBar" aria-hidden="true">
+  <span class="telem-item"><i class="telem-beacon"></i> <b>WEBGL 3D</b> PBR REALM</span>
+  <span class="telem-item"><b>FPS:</b> <span id="telemFps">60 FPS</span></span>
+  <span class="telem-item"><b>POS:</b> <span id="telemCoords">X:0.0 Y:10.0 Z:36.0</span></span>
+  <span class="telem-item"><b>WAYPOINT:</b> <span id="telemWp">1 / 7</span></span>
+</div>
+
 <noscript><p class="noscript">RASHA.QUEST needs JavaScript to play. Contact: <a href="mailto:rashafathima1819@gmail.com">rashafathima1819@gmail.com</a></p></noscript>
 <script src="assets/three.min.js"></script>
 <script>
